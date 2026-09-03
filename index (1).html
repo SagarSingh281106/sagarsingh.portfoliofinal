@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sagar Singh Sikarwar — Computer Science Engineering student and aspiring AI/ML Engineer.">
+<title>Sagar Singh Sikarwar | CSE Student & AI/ML Enthusiast</title>
+<style>
+:root{
+  --bg:#07080d;--bg2:#0c0f18;--text:#f4f7fb;--muted:#9da6b8;
+  --line:rgba(255,255,255,.10);--card:rgba(255,255,255,.055);
+  --accent:#8b7cff;--accent2:#31d7ff;--max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:
+radial-gradient(circle at 80% 10%,rgba(139,124,255,.14),transparent 30%),
+radial-gradient(circle at 10% 40%,rgba(49,215,255,.08),transparent 25%),var(--bg);
+color:var(--text);line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:
+linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 80%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:50;background:rgba(7,8,13,.66);backdrop-filter:blur(18px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{border-color:var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:1.05rem}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;font-size:.9rem;color:var(--muted)}
+.navlinks a{transition:.2s}.navlinks a:hover,.navlinks a.active{color:var(--text)}
+.menu{display:none;background:none;border:0;color:white;font-size:1.6rem}
+section{padding:110px 0;position:relative}
+.hero{min-height:100vh;display:grid;place-items:center;padding-top:130px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);padding:7px 12px;border-radius:999px;color:#cbd1df;background:rgba(255,255,255,.035);font-size:.8rem}
+.dot{width:7px;height:7px;border-radius:50%;background:#61f2a2;box-shadow:0 0 15px #61f2a2}
+h1{font-size:clamp(3.1rem,7vw,6.4rem);line-height:.94;letter-spacing:-.075em;margin:24px 0}
+.gradient{background:linear-gradient(100deg,#fff,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:650px;color:var(--muted);font-size:1.08rem}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:.9rem;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--text);color:#080910;border-color:var(--text)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.btn.secondary:hover{border-color:rgba(139,124,255,.6);background:rgba(139,124,255,.08)}
+.hero-art{height:520px;display:grid;place-items:center;perspective:900px;position:relative}.profile-photo{width:270px;height:270px;object-fit:cover;border-radius:50%;border:2px solid rgba(255,255,255,.25);box-shadow:0 0 55px rgba(139,124,255,.28);position:absolute;z-index:2}.orbit{z-index:1}
+.orbit{width:330px;height:330px;border:1px solid rgba(139,124,255,.3);border-radius:50%;position:relative;transform:rotateX(63deg) rotateZ(-20deg);animation:float 7s ease-in-out infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:30px;border:1px solid rgba(49,215,255,.2);border-radius:50%}
+.orbit:after{inset:75px;border-color:rgba(255,255,255,.16)}
+.core{position:absolute;inset:115px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff, var(--accent) 25%,#201b50 60%,transparent 72%);filter:drop-shadow(0 0 45px rgba(139,124,255,.55));transform:rotateX(-63deg) rotateZ(20deg)}
+.sphere-label{position:absolute;bottom:55px;right:0;border:1px solid var(--line);background:rgba(10,12,20,.72);backdrop-filter:blur(12px);padding:12px 16px;border-radius:14px;color:#cdd3e0;font-size:.8rem}
+@keyframes float{50%{transform:rotateX(63deg) rotateZ(8deg) translateY(-14px)}}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.kicker{color:var(--accent2);font-size:.75rem;text-transform:uppercase;letter-spacing:.18em;font-weight:800}
+h2{font-size:clamp(2.1rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.05em;margin-top:9px}
+.section-head p{color:var(--muted);max-width:500px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.about-card,.skill,.project,.timeline-item,.contact-card{background:var(--card);border:1px solid var(--line);border-radius:22px}
+.about-card{padding:28px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
+.initials{font-size:4.5rem;font-weight:900;letter-spacing:-.09em;background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;color:transparent}
+.about-copy{color:#c1c8d6;font-size:1.03rem}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skill{padding:22px;min-height:160px;transition:.25s}
+.skill:hover,.project:hover{transform:translateY(-6px);border-color:rgba(139,124,255,.38)}
+.skill-icon{font-size:1.5rem;margin-bottom:22px}.skill h3{font-size:1rem}.skill p{font-size:.83rem;color:var(--muted);margin-top:5px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project{padding:24px;min-height:350px;display:flex;flex-direction:column;transition:.25s;position:relative;overflow:hidden}
+.project:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-90px;top:-90px;background:rgba(139,124,255,.12);filter:blur(5px)}
+.project-num{color:var(--muted);font-size:.75rem;letter-spacing:.15em}.project h3{font-size:1.35rem;margin:65px 0 10px;letter-spacing:-.03em}.project p{color:var(--muted);font-size:.9rem}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:24px}.tag{font-size:.72rem;border:1px solid var(--line);padding:5px 8px;border-radius:999px;color:#c9d0df}
+.timeline{display:grid;gap:14px;max-width:850px}.timeline-item{padding:24px;display:flex;justify-content:space-between;gap:30px}.timeline-item small{color:var(--accent2)}.timeline-item p{color:var(--muted);font-size:.9rem}
+.direction{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}.step{padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035);position:relative}.step:not(:last-child):after{content:"→";position:absolute;right:-17px;top:50%;color:var(--accent);z-index:2}.step b{display:block;margin-bottom:7px}.step span{font-size:.78rem;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.contact-card{padding:28px}.contact-list{display:grid;gap:12px;margin-top:25px}.contact-list a{color:#cbd2df}.contact-list a:hover{color:white}
+form{display:grid;gap:12px}input,textarea{width:100%;padding:14px 15px;background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:12px;color:white;font:inherit;outline:none}textarea{min-height:140px;resize:vertical}input:focus,textarea:focus{border-color:rgba(139,124,255,.7)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+.hero-grid,.about,.contact-grid{grid-template-columns:1fr}.hero-art{height:360px}.skills{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr 1fr}.direction{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}.section-head{display:block}.section-head p{margin-top:15px}
+}
+@media(max-width:650px){
+.navlinks{display:none;position:absolute;top:76px;left:0;width:100%;padding:20px;background:rgba(7,8,13,.96);border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.navlinks.open{display:flex}.menu{display:block}
+.hero{padding-top:110px}.hero-art{height:300px}.orbit{width:240px;height:240px}.core{inset:84px}.projects,.skills{grid-template-columns:1fr}.direction{grid-template-columns:1fr}.timeline-item{display:block}.timeline-item small{display:block;margin-bottom:8px}footer{display:block;text-align:center}footer div+div{margin-top:8px}
+}
+</style>
+</head>
+<body>
+<header id="header"><div class="container nav">
+<a class="logo" href="#home">S<span>.</span>Sikarwar</a>
+<nav class="navlinks" id="navlinks">
+<a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+<button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div class="reveal">
+<span class="eyebrow"><i class="dot"></i> Open to learning & building</span>
+<h1>Hi, I'm <span class="gradient">Sagar.</span><br>Developer in progress.</h1>
+<p>Computer Science Engineering student focused on programming, web development, problem solving and building practical technology projects — with a long-term goal of becoming an AI/ML Engineer.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore Projects ↓</a><a class="btn secondary" href="#contact">Let's Connect ↗</a></div>
+</div>
+<div class="hero-art reveal"><img class="profile-photo" src="pf pic.jpeg" alt="Sagar Singh Sikarwar"><div class="orbit"><div class="core"></div></div><div class="sphere-label">CSE • AI/ML • Builder</div></div>
+</div></section>
+
+<section id="about"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">01 — About</div><h2>Learning by<br>building things.</h2></div><p>I prefer turning concepts into projects. Each build is a chance to understand how software, hardware and systems work together.</p></div>
+<div class="about"><div class="about-card reveal"><div class="initials">SS</div><div><b>Computer Science Engineering</b><br><span style="color:var(--muted)">Student • Problem Solver • Future AI/ML Engineer</span></div></div>
+<div class="about-copy reveal"><p>I'm Sagar Singh Sikarwar, a CSE student developing a foundation across programming, frontend development, databases and embedded systems.</p><br><p>My projects range from an Arduino-based gesture-controlled robotic arm to web development and software design. I'm currently strengthening my fundamentals while exploring artificial intelligence and machine learning.</p></div></div>
+</div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">02 — Skills</div><h2>Tools I work with.</h2></div><p>A growing toolkit. I value strong fundamentals more than inflated proficiency percentages.</p></div>
+<div class="skills">
+<div class="skill reveal"><div class="skill-icon">⌘</div><h3>C / C++</h3><p>Programming fundamentals & problem solving</p></div>
+<div class="skill reveal"><div class="skill-icon">◉</div><h3>Python</h3><p>Programming & AI/ML foundations</p></div>
+<div class="skill reveal"><div class="skill-icon">◇</div><h3>JavaScript</h3><p>Interactive web development</p></div>
+<div class="skill reveal"><div class="skill-icon">▣</div><h3>HTML & CSS</h3><p>Structure, layout & styling</p></div>
+<div class="skill reveal"><div class="skill-icon">▤</div><h3>SQL / DBMS</h3><p>Database concepts & queries</p></div>
+<div class="skill reveal"><div class="skill-icon">⚙</div><h3>Arduino</h3><p>Embedded programming & prototyping</p></div>
+<div class="skill reveal"><div class="skill-icon">⌁</div><h3>Sensors</h3><p>MPU6050, flex sensors & motion input</p></div>
+<div class="skill reveal"><div class="skill-icon">✦</div><h3>AI / ML</h3><p>Current learning & exploration</p></div>
+</div></div></section>
+
+<section id="projects"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">03 — Projects</div><h2>Things I've built.</h2></div><p>Projects that helped me move from theory to hands-on understanding.</p></div>
+<div class="projects">
+<article class="project reveal"><span class="project-num">PROJECT 01</span><h3>Gesture-Controlled Robotic Arm</h3><p>An Arduino-based robotic arm concept that translates hand movement into robotic motion using sensors, servo motors and embedded programming.</p><div class="tags"><span class="tag">Arduino</span><span class="tag">C/C++</span><span class="tag">MPU6050</span><span class="tag">Flex Sensor</span><span class="tag">Servo</span></div></article>
+<article class="project reveal"><span class="project-num">PROJECT 02</span><h3>Instagram-Inspired Webpage</h3><p>A basic social-media-inspired webpage created while learning HTML and CSS, helping me understand webpage structure, layouts and styling through code.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Frontend</span></div></article>
+<article class="project reveal"><span class="project-num">PROJECT 03</span><h3>Smart Energy-Efficient Home Design Tool</h3><p>A software design project focused on helping users plan energy-efficient homes, supported by system analysis and software engineering artifacts.</p><div class="tags"><span class="tag">System Design</span><span class="tag">DFD</span><span class="tag">UML</span><span class="tag">SE</span></div></article>
+</div></div></section>
+
+<section id="education"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">04 — Education</div><h2>My foundation.</h2></div><p>Academic learning is the base I use to build practical projects.</p></div>
+<div class="timeline"><div class="timeline-item reveal"><div><small>BACHELOR'S DEGREE</small><h3>Computer Science Engineering</h3><p>Building foundations in programming, data structures, databases, software engineering and computer science.</p><p style="margin-top:10px;color:#cbd2df"><b>CGPA: 8.74</b></p></div><div style="color:var(--muted)">B.Tech / CSE</div></div></div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head reveal"><div><div class="kicker">05 — Direction</div><h2>Where I'm headed.</h2></div><p>A simple roadmap from fundamentals to intelligent applications.</p></div>
+<div class="direction">
+<div class="step reveal"><b>01 · Foundations</b><span>Programming, logic & DSA</span></div>
+<div class="step reveal"><b>02 · Development</b><span>Web, databases & software</span></div>
+<div class="step reveal"><b>03 · AI / ML</b><span>Models, data & experimentation</span></div>
+<div class="step reveal"><b>04 · Build</b><span>Practical intelligent applications</span></div>
+</div></div></section>
+
+<section id="contact"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">06 — Contact</div><h2>Let's build something.</h2></div><p>Have an idea, project, internship opportunity or simply want to connect? Send a message.</p></div>
+<div class="contact-grid">
+<div class="contact-card reveal"><h3>Get in touch</h3><div class="contact-list">
+<a href="mailto:Sagar@gmail.com">✉ Sagar@gmail.com</a>
+<a href="https://github.com/" target="_blank" rel="noopener">◉ GitHub</a>
+<a href="https://www.linkedin.com/" target="_blank" rel="noopener">in LinkedIn</a>
+</div></div>
+<div class="contact-card reveal"><form id="contactForm"><input id="name" placeholder="Your name" required><input id="email" type="email" placeholder="Your email" required><textarea id="message" placeholder="Your message" required></textarea><button class="btn primary" type="submit">Send Message ↗</button></form></div>
+</div></div></section>
+</main>
+
+<footer><div class="container" style="display:flex;justify-content:space-between;width:100%"><span>© <span id="year"></span> Sagar Singh Sikarwar</span><span>Designed & built with curiosity.</span></div></footer>
+
+<script>
+const header=document.getElementById('header'),menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const sections=[...document.querySelectorAll('main section[id]')], links=[...document.querySelectorAll('.navlinks a')];
+window.addEventListener('scroll',()=>{let current='home';sections.forEach(s=>{if(scrollY>=s.offsetTop-180)current=s.id});links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+current))});
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const email='Sagar@gmail.com';
+ const subject=encodeURIComponent('Portfolio contact from '+document.getElementById('name').value);
+ const body=encodeURIComponent(document.getElementById('message').value+'\n\nReply to: '+document.getElementById('email').value);
+ window.location.href=`mailto:${email}?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
